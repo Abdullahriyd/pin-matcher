@@ -82,9 +82,9 @@ border-radius: 10px;
 cursor: pointer;
 }
 
-.button:hover, .backSpace:hover, .clear:hover{
-    transform: scale(.95);
-}
+.button:active, .backSpace:active, .clear:active {
+    transform: scale(.92);
+  }
 
 .blink-me {
 color: #E0B612;
