@@ -27,9 +27,14 @@ body {
     font-size: 20px;
     text-align: center;
 }
+
 .generate-btn:focus{
     outline: none;
     box-shadow: none;
+}
+
+.generate-btn:hover{
+    transform: scale(1.05);
 }
 
 input[type='text']{
@@ -76,6 +81,11 @@ margin-right: -4px;
 border-radius: 10px;
 cursor: pointer;
 }
+
+.button:hover{
+    transform: scale(.95);
+}
+
 .blink-me {
 color: #E0B612;
 }
@@ -87,6 +97,7 @@ color: #E0B612;
     background: #495BC3;
     color: #fff;
 }
+
 .notify {
     color: #fff;
     text-align: center;
@@ -103,4 +114,12 @@ color: #E0B612;
 .action-left {
     color: #FF3C5F;
     margin-top: 10px;
+}
+
+#notify-wrong {
+    display: none;
+}
+
+#notify-right {
+    display: none;
 }
