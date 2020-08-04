@@ -18,32 +18,34 @@
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                    <input id="pin-matchingArea" class="form-control text-center" type="text">
                     <div class="numbers">
-                        <div class="calc-body">
-                            <div class="calc-button-row">
+                        <div  class="calc-body">
+                        <div id="sevenToZero">
+                            <div id="sevenToNine" class="calc-button-row">
                               <div class="button">7</div>
                               <div class="button">8</div>
                               <div class="button">9</div>
                             </div>
-                            <div class="calc-button-row">
+                            <div id="fourToSix" class="calc-button-row">
                               <div class="button">4</div>
                               <div class="button">5</div>
                               <div class="button">6</div>
                             </div>
-                            <div class="calc-button-row">
+                            <div id="oneToThree" class="calc-button-row">
                               <div class="button">1</div>
                               <div class="button">2</div>
                               <div class="button">3</div>
                             </div>
-                            <div class="calc-button-row">
-                                <div class="button"><</div>
+                            <div id="zero" class="calc-button-row">
+                                <div id="backSpace" class="backSpace"><</div>
                                 <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div id="clear" class="clear">C</div>
                             </div>
-                            <div>
-                                <button type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                            </div>
+                        <div>
+                                <button id="submit" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left"><span id="tryLeft" >3</span> try left</p>
                             </div>
                     </div>
                 </div>
@@ -52,6 +54,7 @@
         <div class="notify-section">
             <p id="notify-wrong"class="notify">❌ Pin Didn't Match, Please try again</p>
             <p id="notify-right" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="notify-block"class="notify">❌ Door is locked forever for you ❌</p>
         </div>
     </div>
 
