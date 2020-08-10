@@ -44,21 +44,34 @@ document.getElementById('clear').addEventListener('click', function(){
 let tryLeftValue = 2;
 
 document.getElementById("submit").addEventListener('click', function(){
-    if (generatedValue == buttonValue){
-        document.getElementById("notify-right").style.display = 'block';
-        document.getElementById("notify-wrong").style.display = 'none';
+    if(generatedValue == ''){
+        window.alert("Please Generate Pin First");
+    }
+    else if(buttonValue == ''){
+        window.alert("Please Press The Keys");   
     }else{
-        document.getElementById("notify-wrong").style.display = 'block';
-        document.getElementById("notify-right").style.display = 'none';
-        if(tryLeftValue > 0){
-            tryLeftValue-- ;
-        document.getElementById("tryLeft").innerHTML = tryLeftValue + 1 ;
-        }
-        else if(tryLeftValue == 0){
-            document.getElementById("tryLeft").innerHTML = tryLeftValue ;
-            document.getElementById("submit").style.display = 'none';
-            document.getElementById("notify-block").style.display = 'block';
+        if (generatedValue == buttonValue){
+            generatedValue = '' ;
+            document.getElementById('pin-inputArea').value = generatedValue ;
+            buttonValue = '' ;
+            document.getElementById("pin-matchingArea").value = buttonValue ;
+            document.getElementById("notify-right").style.display = 'block';
             document.getElementById("notify-wrong").style.display = 'none';
+            tryLeftValue = 2;
+            document.getElementById("tryLeft").innerHTML = tryLeftValue + 1 ;
+        }else{
+            document.getElementById("notify-wrong").style.display = 'block';
+            document.getElementById("notify-right").style.display = 'none';
+            if(tryLeftValue > 0){
+                tryLeftValue-- ;
+            document.getElementById("tryLeft").innerHTML = tryLeftValue + 1 ;
+            }
+            else if(tryLeftValue == 0){
+                document.getElementById("tryLeft").innerHTML = tryLeftValue ;
+                document.getElementById("submit").style.display = 'none';
+                document.getElementById("notify-block").style.display = 'block';
+                document.getElementById("notify-wrong").style.display = 'none';
+            }
         }
     }
 })

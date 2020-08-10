@@ -28,12 +28,12 @@ body {
     text-align: center;
 }
 
-.generate-btn:focus{
+.generate-btn:focus, .submit-btn:focus{
     outline: none;
     box-shadow: none;
 }
 
-.generate-btn:active {
+.generate-btn:active, .submit-btn:active{
     transform: scale(.92);
   }
 
