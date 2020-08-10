@@ -53,7 +53,6 @@ document.getElementById("submit").addEventListener('click', function(){
         if(tryLeftValue > 0){
             tryLeftValue-- ;
         document.getElementById("tryLeft").innerHTML = tryLeftValue + 1 ;
-        console.log(tryLeftValue);
         }
         else if(tryLeftValue == 0){
             document.getElementById("tryLeft").innerHTML = tryLeftValue ;
